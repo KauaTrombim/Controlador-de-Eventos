@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eventos.Views.resumo"
+             Title="Resumo do evento"
+             BackgroundColor="{StaticResource Gray100}">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label 
+            Text="{Binding Nome}"
+            TextColor="{StaticResource Primary}"
+            VerticalOptions="Center" 
+            FontSize="50" 
+            HorizontalOptions="Center" />
+        <Frame BackgroundColor="{StaticResource Gray900}"
+                Margin="10">
+            <VerticalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Local do evento: "/>
+                    <Label Text="{Binding Local}"
+                            TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Data de Início: "/>
+                    <Label Text="{Binding Dt_inicio, StringFormat='{}{0:dd/MM/yyyy}'}"
+                            TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Data de Término: "/>
+                    <Label Text="{Binding Dt_termino, StringFormat='{}{0:dd/MM/yyyy}'}"
+                            TextColor="{StaticResource Primary}"/>        
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Número de participantes: "/>
+                    <Label Text="{Binding Participantes}"
+                          TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Número de participantes: "/>
+                    <Label Text="{Binding Participantes}"
+                          TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Duração do evento"/>
+                    <Label Text="{Binding Duracao}"
+                          TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="5">
+                    <Label Text="Valor total do evento:"/>
+                    <Label Text="{Binding ValorTotal}"
+                          TextColor="{StaticResource Primary}"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <Button Text="Voltar"
+                HorizontalOptions="Center"
+                BackgroundColor="{StaticResource Primary}"
+                Clicked="Button_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
